@@ -1,0 +1,25 @@
+Nome , Idade , Sexo , Peso , Cidade , Estado Civil , QTD Filhos , Escolaridade , Emprego Formal , Renda , Imovel , Tipo de Imovel , Pegou Covid , Imunizacao Completa
+Elias Monteiro , 21 , Masculino , 84.5 , Recife , Solteiro , 0 , Superior Incompleto , Sim , 1.212 - 2.424 , Proprio , Casa , Sim , Sim 
+Eliade Monteiro , 47 , Feminino , 46.3 , Recife , Solteiro , 3 , Superior Completo , Nao , Menos 1.212 , Proprio , Casa , Sim , Sim 
+Eliabe Monteiro , 53 , Feminino , 55.9 , Recife , Casado , 2 , Superior Completo , Sim , Acima 4.848 , Proprio , Casa , Sim , Sim 
+Felipe Malagueta , 38 , Masculino , 80.6 , Recife , Separado , 0 , Superior Completo , Sim , Prefiro nao informar , Proprio , Apartamento , Sim , Sim 
+Eli Pessoa , 57 , Feminino , 71.5 , Recife , Casado , 0 , Superior Completo , Sim , 2.424 - 4.848 , Alugado , Apartamento , Sim , Sim 
+Ana Carmen , 41 , Feminino , 65.4 , Igarassu , Divorciado , 1 , Superior Completo , Sim , 2.424 - 4.848 , Alugado , Casa , Sim , Nao 
+Carwyn Morales , 45 , Masculino , 95.6 , Olinda , Separado , 2 , Superior Completo , Nao , Prefiro nao informar , Alugado , Apartamento , Sim , Sim 
+Maria Duarte , 51 , Feminino , 50.2 , Recife , Solteiro , 0 , Superior Completo , Sim , Prefiro nao informar , Proprio , Apartamento , Nao , Sim 
+Aldenice Paiva , 47 , Feminino , 62.3 , Recife , Divorciado , 1 , Superior Completo , Sim , 2.424 - 4.848 , Proprio , Apartamento , Sim , Nao 
+Desiree Araujo , 60 , Feminino , 90.7 , Recife , Divorciado , 1 , Superior Completo , Sim , Prefiro nao informar , Alugado , Apartamento , Sim , Nao 
+Nicoly Evellin , 18 , Feminino , 40.5 , Recife , Solteiro , 0 , Medio Completo , Nao , Sem renda , Proprio , Casa , Talvez , Sim 
+Giselle Carvalho , 41 , Feminino , 77.5 , Recife , Casado , 0 , Superior Completo , Sim , 2.424 - 4.848 , Proprio , Apartamento , Sim , Sim 
+Maria Leocadia , 60 , Feminino , 51.3 , Jaboatao dos Guararapes , Solteiro , 3 , Medio Completo , Nao , Sem renda , Alugado , Apartamento , Nao , Sim 
+Leticia Trindade , 23 , Feminino , 48.5 , Paulista , Solteiro , 0 , Superior Incompleto , Nao , 1.212 - 2.424 , Proprio , Casa , Sim , Sim 
+Julianne Santos , 38 , Feminino , 76.3 , Jaboatao dos Guararapes , Casado , 1 , Superior Completo , Sim , 1.212 - 2.424 , Alugado , Casa , Sim , Sim 
+Lisandra Maranhao , 43 , Feminino , 99.6 , Recife , Solteiro , 1 , Superior Completo , Nao , Acima 4.848 , Proprio , Apartamento , Sim , Sim 
+Laryssa Alexandre , 20 , Feminino , 50.5 , Jaboatao dos Guararapes , Solteiro , 0 , Superior Incompleto , Nao , Menos 1.212 , Alugado , Apartamento , Nao , Sim 
+Eliseu Monteiro , 58 , Masculino , 105.3 , Recife , Viuvo , 3 , Medio Completo , Sim , Acima 4.848 , Proprio , Apartamento , Nao , Nao 
+Marcelo Cavalcante , 25 , Masculino , 50.0 , Jaboatao dos Guararapes , Solteiro , 0 , Superior Completo , Sim , 1.212 - 2.424 , Proprio , Apartamento , Sim , Sim 
+Carlos Pamila , 38 , Masculino , 110.6 , Sao Lourenco da Mata , Casado , 3 , Superior Completo , Sim , Acima 4.848 , Proprio , Apartamento , Sim , Sim 
+Henrique Pablo , 20 , Masculino , 69.9 , Recife , Solteiro , 0 , Superior Incompleto , Nao , Sem renda , Proprio , Casa , Sim , Sim 
+Everton Silva , 20 , Masculino , 70.3 , Cabo de Santo Agostinho , Solteiro , 0 , Superior Incompleto , Sim , 1.212 - 2.424 , Proprio , Casa , Nao , Nao 
+Camila Brasil , 20 , Feminino , 57.6 , Recife , Solteiro , 0 , Superior Incompleto , Nao , Menos 1.212 , Proprio , Casa , Sim , Sim 
+Hugo Leonardo , 38 , Masculino , 80.0 , Recife , Casado , 0 , Superior Completo , Sim , 2.424 - 4.848 , Proprio , Casa , Sim , Nao 

@@ -1,0 +1,316 @@
+install.packages("dplyr")
+library("dplyr")
+
+banco <-read.delim2("BancodeDados.txt",header = TRUE, sep = ",")
+
+cat("Estatísticas da Variável Idade: ","\n","Média: ", mean(banco$Idade),"\n", "Mediana: ", median(banco$Idade), "\n", 
+    "Q1: ", quantile(banco$Idade, probs = 0.25),"\n", "Q3: ", quantile(banco$Idade, probs = 0.75), "\n", "Variância: ", 
+    var(banco$Idade), "\n", "Desvio Padrão: ", sd(banco$Idade))
+
+cat("Estatísticas da Variável Peso: ","\n","Média: ", mean(as.numeric(banco$Peso)),"\n", "Mediana: ", median(as.numeric(banco$Peso)), "\n", 
+    "Q1: ", quantile(as.numeric(banco$Peso), probs = 0.25),"\n", "Q3: ", quantile(as.numeric(banco$Peso), probs = 0.75), "\n", "Variância: ", 
+    var(as.numeric(banco$Peso)), "\n", "Desvio Padrão: ", sd(as.numeric(banco$Peso)))
+
+cat("Estatísticas da Variável Filhos: ","\n","Média: ", mean(banco$QTD.Filhos),"\n", "Mediana: ", median(banco$QTD.Filhos), "\n", 
+    "Q1: ", quantile(banco$QTD.Filhos, probs = 0.25),"\n", "Q3: ", quantile(banco$QTD.Filhos, probs = 0.75), "\n", "Variância: ", 
+    var(banco$QTD.Filhos), "\n", "Desvio Padrão: ", sd(banco$QTD.Filhos))
+
+############################################# Váriavel Sexo ###################################################
+qtd.h = 0
+qtd.f = 0
+qtd.t = 0
+
+for(i in banco$Sexo) 
+{
+  if (i == " Masculino ")
+    qtd.h = qtd.h + 1
+  else if (i == " Feminino ")
+    qtd.f = qtd.f + 1
+  else if (i == " Transgero ")
+    qtd.t = qtd.t + 1
+}
+
+cat("Estatísticas da Variável Sexo: ", "\n", "Sexo Feminino: ", (qtd.f*100)/length(banco$Sexo),"%", "\n", "Sexo Masculino: ", (qtd.h*100)/length(banco$Sexo),"%", "\n",
+    "Transgenero: ", (qtd.t*100)/length(banco$Sexo), "%")
+
+############################################# Váriavel Cidade #################################################
+
+qtd.s = 0
+qtd.i = 0
+qtd.p = 0
+qtd.c = 0
+qtd.o = 0
+qtd.r = 0
+qtd.j = 0
+
+for(i in banco$Cidade) 
+{
+  if (i == " Sao Lourenco da Mata ")
+    qtd.s = qtd.s + 1
+  
+  else if (i == " Recife ")
+    qtd.r = qtd.r + 1
+  
+  else if (i == " Igarassu ")
+    qtd.i = qtd.i + 1
+  
+  else if (i == " Olinda ")
+    qtd.o = qtd.o + 1
+  
+  else if (i == " Jaboatao dos Guararapes ")
+    qtd.j = qtd.j + 1
+  
+  else if (i == " Cabo de Santo Agostinho ")
+    qtd.c = qtd.c + 1
+  
+  else if (i == " Paulista ")
+    qtd.p = qtd.p + 1
+}
+
+cat("Estatísticas da Variável Cidade: ", 
+    "\n", "Recife: ", (qtd.r*100)/length(banco$Cidade),"%", 
+    "\n", "Jaboatão dos Guararapes: ", (qtd.j*100)/length(banco$Cidade),"%",
+    "\n", "Cabo de Santo Agostinho: ", (qtd.c*100)/length(banco$Cidade),"%", 
+    "\n", "Olinda: ", (qtd.o*100)/length(banco$Cidade),"%", 
+    "\n", "Igarassu: ", (qtd.i*100)/length(banco$Cidade),"%", 
+    "\n", "Paulista: ", (qtd.p*100)/length(banco$Cidade),"%", 
+    "\n", "São Lourenço da Mata: ", (qtd.s*100)/length(banco$Cidade),"%")
+
+
+############################################# Váriavel Estado Civil #################################################
+
+sol = 0
+cas = 0
+sep = 0
+viu = 0
+div = 0
+  
+for(i in banco$Estado.Civil) 
+{
+  if (i == " Solteiro ")
+    sol = sol + 1
+  
+  else if (i == " Casado ")
+    cas = cas + 1
+      
+  else if (i == " Separado ")
+    sep = sep + 1
+      
+  else if (i == " Viuvo ")
+    viu = viu + 1
+      
+  else if (i == " Divorciado ")
+    div = div + 1
+}
+
+cat("Estatísticas da Variável Estado Civil: ",
+    "\n", "Solteiro: ", (sol*100)/length(banco$Estado.Civil),"%", 
+    "\n", "Casado: ", (cas*100)/length(banco$Estado.Civil),"%",
+    "\n", "Separado: ", (sep*100)/length(banco$Estado.Civil),"%", 
+    "\n", "Viuvo: ", (viu*100)/length(banco$Estado.Civil),"%", 
+    "\n", "Divorciado: ", (div*100)/length(banco$Estado.Civil),"%")
+
+############################################# Váriavel Escolaridade #################################################
+
+
+anal = 0
+fun.in = 0
+fun.co = 0 
+med.in = 0
+med.co = 0
+sup.in = 0
+sup.co = 0
+mes = 0
+dou = 0
+
+for(i in banco$Escolaridade) 
+{
+  if (i == " Analfabeto ")
+    anal = anal + 1
+  
+  else if (i == " Fundamental Incompleto ")
+    fun.in = fun.in + 1
+  
+  else if (i == " Fundamental Completo ")
+    fun.co = fun.co + 1 
+  
+  else if (i == " Medio Incompleto ")
+    med.in = med.in + 1
+  
+  else if (i == " Medio Completo ")
+    med.co = med.co + 1
+  
+  else if (i == " Superior Incompleto ")
+    sup.in = sup.in + 1
+  
+  else if (i == " Superior Completo ")
+    sup.co = sup.co + 1
+  
+  else if (i == " Mestrado ")
+    mes = mes + 1
+  
+  else if (i == " Doutorado ")
+    dou = dou + 1
+}
+
+
+cat("Estatísticas da Variável Estado Civil: ",
+    "\n", "Analfabeto: ", (anal*100)/length(banco$Escolaridade),"%", 
+    "\n", "Fundamental Incompleto: ", (fun.in*100)/length(banco$Escolaridade),"%",
+    "\n", "Fundamental Completo: ", (fun.co*100)/length(banco$Escolaridade),"%", 
+    "\n", "Medio Incompleto: ", (med.in*100)/length(banco$Escolaridade),"%", 
+    "\n", "Medio Completoo: ", (med.co*100)/length(banco$Escolaridade),"%",
+    "\n", "Superior Incompleto: ", (sup.in*100)/length(banco$Escolaridade),"%",
+    "\n", "Superior Completo: ", (sup.co*100)/length(banco$Escolaridade),"%", 
+    "\n", "Mestrado: ", (mes*100)/length(banco$Escolaridade),"%", 
+    "\n", "Doutorado: ", (dou*100)/length(banco$Escolaridade),"%")
+
+############################################# Váriavel Emprego Formal #################################################
+
+ef.s = 0
+ef.n = 0
+
+for(i in banco$Emprego.Formal) 
+{
+  if (i == " Sim ")
+    ef.s = ef.s + 1
+  
+  else if (i == " Nao ")
+    ef.n = ef.n + 1
+}
+
+cat("Estatísticas da Variável Emprego FOrmal: ",
+    "\n", "Sim: ", (ef.s*100)/length(banco$Emprego.Formal),"%",
+    "\n", "Não: ", (ef.n*100)/length(banco$Emprego.Formal),"%")
+
+############################################# Váriavel Renda ########################################################
+
+sem.rend = 0
+rend1 = 0
+rend2 = 0
+rend3 = 0
+rend4 = 0
+pre.inf = 0
+
+
+
+for(i in banco$Renda) 
+{
+  if (i == " Sem renda ")
+    sem.rend = sem.rend + 1
+  
+  else if (i == " Menos 1.212 ")
+    rend1 = rend1 + 1
+  
+  else if (i == " 1.212 - 2.424 ")
+    rend2 = rend2 + 1 
+  
+  else if (i == " 2.424 - 4.848 ")
+    rend3 = rend3 + 1
+  
+  else if (i == " Acima 4.848 ")
+    rend4 = rend4 + 1
+  
+  else if (i == " Prefiro nao informar ")
+    pre.inf = pre.inf + 1
+}
+
+
+cat("Estatísticas da Variável Renda: ",
+    "\n", "Sem renda: ", (sem.rend*100)/length(banco$Renda),"%", 
+    "\n", "Menos 1.212: ", (rend1*100)/length(banco$Renda),"%",
+    "\n", "1.212 - 2.424: ", (rend2*100)/length(banco$Renda),"%", 
+    "\n", "2.424 - 4.848: ", (rend3*100)/length(banco$Renda),"%", 
+    "\n", "Acima 4.848o: ", (rend4*100)/length(banco$Renda),"%",
+"\n", "Prefiro não informar: ", (pre.inf*100)/length(banco$Renda),"%")
+
+############################################# Váriavel Imovel ########################################################
+
+imovel1 = 0
+imovel2 = 0
+
+for(i in banco$Imovel) 
+{
+  if (i == " Proprio ")
+    imovel1 = imovel1 + 1
+  
+  else if (i == " Alugado ")
+    imovel2 = imovel2 + 1
+}
+
+cat("Estatísticas da Variável Imovel: ",
+    "\n", "Próprio: ", (imovel1*100)/length(banco$Imovel),"%",
+    "\n", "Alugado: ", (imovel2*100)/length(banco$Imovel),"%")
+
+############################################# Váriavel Tipo de Imovel ########################################################
+
+t.imovel1 = 0
+t.imovel2 = 0
+
+for(i in banco$Tipo.de.Imovel) 
+{
+  if (i == " Casa ")
+    t.imovel1 = t.imovel1 + 1
+  
+  else if (i == " Apartamento ")
+    t.imovel2 = t.imovel2 + 1
+}
+
+cat("Estatísticas da Variavel Tipo de Imovel: ",
+    "\n", "Próprio: ", (t.imovel1*100)/length(banco$Tipo.de.Imovel),"%",
+    "\n", "Alugado: ", (t.imovel2*100)/length(banco$Tipo.de.Imovel),"%")
+
+############################################# Váriavel Pegou Covid ########################################################
+
+sim = 0
+nao = 0
+talvez = 0
+
+for(i in banco$Pegou.Covid) 
+{
+  if (i == " Sim ")
+    sim = sim + 1
+  
+  else if (i == " Nao ")
+    nao = nao + 1
+
+  else if (i == " Talvez ")
+    talvez = talvez + 1
+}
+
+cat("Estatísticas da Váriavel Pegou Covid: ",
+    "\n", "Sim: ", (sim*100)/length(banco$Pegou.Covid),"%",
+    "\n", "Não: ", (nao*100)/length(banco$Pegou.Covid),"%",
+    "\n", "Talvez: ", (talvez*100)/length(banco$Pegou.Covid),"%")
+
+############################################# Váriavel Imunização Completa ########################################################
+
+sim = 0
+nao = 0
+
+for(i in banco$Imunizacao.Completa) 
+{
+  if (i == " Sim ")
+    sim = sim + 1
+  
+  else if (i == " Nao ")
+    nao = nao + 1
+}
+
+cat("Estatísticas da Váriavel Imunização Completa: ",
+    "\n", "Sim: ", (sim*100)/length(banco$Imunizacao.Completa),"%",
+    "\n", "Não: ", (nao*100)/length(banco$Imunizacao.Completa),"%")
+
+##########################################################################################################
+a <- (qtd.f*100)/length(banco$Sexo)
+b <- (qtd.h*100)/length(banco$Sexo)
+c <- (qtd.t*100)/length(banco$Sexo)
+
+e1 <- unique(banco$Sexo)
+e2 <- c(sort(a$n),sort(b$n),sort(c$n))
+pie(e2, labels = e1$banco$Sexo, main = "Percentual de escolaridade")
+
+plot((a,0),(b,0))
+
+data.frame(banco)
+sexo<-data.frame()
